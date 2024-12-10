@@ -1,0 +1,2 @@
+Contexte du Projet
+Le Centre de Bien-être FitTrack a besoin d'une solution de gestion performante et centralisée pour ses opérations quotidiennes. Ce projet consiste à concevoir une base de données robuste et bien structurée pour répondre aux divers besoins fonctionnels du centre.
