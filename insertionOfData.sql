@@ -10,7 +10,7 @@ INSERT INTO members (first_name, last_name, gender, date_of_birth, phone_number,
 ('Zakaryae', 'Ramas', 'Male', '1994-11-20', '1122334455', 'Zakaryae.Ramas@gmail.com');
 --
 INSERT INTO members (first_name, last_name, gender, date_of_birth, phone_number) VALUES
-('Taha', 'Said', 'Male', '2001-12-09', '1122334412');
+('yara', 'Said', 'Female', '2012-09-26', '0677889944');
 
 
 -- Insertion dans rooms :

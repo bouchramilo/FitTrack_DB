@@ -163,13 +163,14 @@ WHERE
     );
 
 -- exercice 8 :
-SELECT *
-FROM memberships
-WHERE
-    start_date BETWEEN '2024-12-01' AND '2024-12-07';
+UPDATE members
+SET age_categorie = CASE
+    WHEN (YEAR(CURDATE()) - YEAR(date_of_birth)) - (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(date_of_birth, '%m%d')) < 18 THEN 'Junior'
+    WHEN (YEAR(CURDATE()) - YEAR(date_of_birth)) - (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(date_of_birth, '%m%d')) BETWEEN 18 AND 59 THEN 'Adulte'
+    WHEN (YEAR(CURDATE()) - YEAR(date_of_birth)) - (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(date_of_birth, '%m%d')) >= 60 THEN 'Senior'
+    ELSE NULL 
+END;
 
--- exercice 9 :
-ALTER TABLE members ADD age_categorie enum('Junior', 'Adulte', 'Senior');
 
 -- exercice 10 :
 SELECT count(*) FROM appointments;
