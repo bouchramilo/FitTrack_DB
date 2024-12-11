@@ -15,11 +15,11 @@ INSERT INTO members (first_name, last_name, gender, date_of_birth, phone_number)
 
 -- Insertion dans rooms :
 INSERT INTO rooms (room_number, room_type, capacity) VALUES
-('4', 'Yoga', 20),
+('4', 'Cardio', 20),
 ('5', 'Cardio', 15),
-('6', 'Strength Training', 25),
-('7', 'Aerobics', 30),
-('8', 'Musculation', 10);
+('6', 'Studio', 25),
+('7', 'Weights', 30),
+('8', 'Weights', 10);
 
 
 -- Insertion dans departments :

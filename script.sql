@@ -31,10 +31,10 @@ CREATE TABLE members (
     id_member INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
-    gender VARCHAR(15),
+    gender ENUM('Male', 'Female', 'other'),
     date_of_birth DATE,
     phone_number VARCHAR(15),
-    email VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
     PRIMARY KEY (id_member)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE members (
 CREATE TABLE rooms (
     id_room INT NOT NULL AUTO_INCREMENT,
     room_number VARCHAR(20) NOT NULL,
-    room_type VARCHAR(20),
+    room_type ENUM('Cardio', 'Weights', 'Studio'),
     capacity INT,
     PRIMARY KEY (id_room)
 );
@@ -169,7 +169,7 @@ WHERE
     start_date BETWEEN '2024-12-01' AND '2024-12-07';
 
 -- exercice 9 :
-ALTER TABLE members ADD age_categorie varchar(50);
+ALTER TABLE members ADD age_categorie enum('Junior', 'Adulte', 'Senior');
 
 -- exercice 10 :
 SELECT count(*) FROM appointments;
